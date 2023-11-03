@@ -1,0 +1,55 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "geeknews",
+  "title": "GeekNews",
+  "description": "GeekNews for raycast",
+  "icon": "command-icon.png",
+  "author": "xtzdkz5wwn",
+  "categories": [
+    "Applications"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "GeekNews",
+      "subtitle": "긱뉴스",
+      "description": "list geeknews",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "rssUrl",
+      "label": "RSS URL",
+      "key": "rssUrl",
+      "description": "GeekNews RSS Url",
+      "type": "textfield",
+      "title": "GeekNews RSS URL",
+      "default": "http://feeds.feedburner.com/geeknews-feed"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.61.0",
+    "cheerio": "1.0.0-rc.12",
+    "moment": "^2.29.4",
+    "node-fetch": "^3.3.2",
+    "node-html-markdown": "^1.3.0",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/node": "18.18.4",
+    "@types/react": "18.2.27",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
